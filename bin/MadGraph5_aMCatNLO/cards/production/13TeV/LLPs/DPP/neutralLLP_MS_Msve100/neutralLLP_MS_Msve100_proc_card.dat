@@ -5,13 +5,18 @@ set loop_color_flows False
 set gauge unitary
 set complex_mass_scheme False
 set max_npoint_for_channel 0
+
 import model sm
+
 define p = g u c d s u~ c~ d~ s~
 define j = g u c d s u~ c~ d~ s~
 define l+ = e+ mu+
 define l- = e- mu-
 define vl = ve vm vt
 define vl~ = ve~ vm~ vt~
-import model RPVMSSM_UFO/
+
+import model RPVMSSM_UFO
+
 generate p p > sve sve~
-output neutralLLP_MS_Msve100
+
+output neutralLLP_MS_Msve100 -nojpeg
